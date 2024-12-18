@@ -38,11 +38,11 @@ namespace Environment
 
         private IEnumerator MotorRoutine()
         {
-            Debug.Log("Starting MoveRoutine");
+            //Debug.Log("Starting MoveRoutine");
             //Select Point from circle around startingPos
             while (true)
             {
-                Debug.Log("Starting Routine Again");
+                //Debug.Log("Starting Routine Again");
                 _moveComplete = false;
                 Vector2 offset = new Vector2(Random.Range(-0.75f, 0.75f), Random.Range(-0.25f, 0.25f));
                 _target = _startingPos + offset;

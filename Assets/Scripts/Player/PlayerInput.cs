@@ -11,6 +11,7 @@ namespace Player
     {
         private PlayerMotor _motor;
         private Vector3 _currentMovement;
+        
 
         private void Start()
         {
@@ -28,7 +29,13 @@ namespace Player
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _motor.Jump();
+                if(_motor.IsGrounded)
+                    _motor.Jump();
+            }
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _motor.HandleExtendedJumpInput();
             }
                 
             
