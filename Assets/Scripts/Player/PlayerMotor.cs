@@ -20,7 +20,8 @@ namespace Player
         private float _standardGravity = 1.0f;
         [SerializeField]
         private float _fallingGravity = 1.3f;
-        
+
+
 
         private void Start()
         {
@@ -54,6 +55,7 @@ namespace Player
         {
             CheckGrounded();
             JumpBehavior();
+
         }
 
         private void CheckGrounded()
@@ -72,6 +74,7 @@ namespace Player
             }
             if (_jumpCurTimer < _jumpMaxTimer)
             {
+                _rb.gravityScale = _standardGravity;
                 _jumpCurTimer += Time.deltaTime;
             }
             else
@@ -80,10 +83,10 @@ namespace Player
             }
         }
 
-        private void OnDrawGizmos()
-        {
-            Vector2 center = this.GetComponent<Collider2D>().transform.position;
-            Gizmos.DrawLine(center, center + Vector2.down * _groundedCheckDist);
-        }
+        // private void OnDrawGizmos()
+        // {
+        //     Vector2 center = this.GetComponent<Collider2D>().transform.position;
+        //     Gizmos.DrawLine(center, center + Vector2.down * _groundedCheckDist);
+        // }
     }
 }
