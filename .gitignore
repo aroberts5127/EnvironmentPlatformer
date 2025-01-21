@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.idea/.idea.EnvironmentPlatformer/.idea
+/Library
+/Logs
+/obj/Debug
+/ProjectSettings
+/Temp
+/UserSettings
+/.vs/EnvironmentPlatformer
